@@ -1,3 +1,11 @@
 function setup() {
-    console.log("Test");
+    createCanvas(windowWidth, windowHeight);
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+    background(0);
 }
