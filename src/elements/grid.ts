@@ -12,7 +12,7 @@ class Grid {
     }
     private static prepareGrid(): void {
         scale(Grid_Scale);
-        translate(1, 1);
+        translate(1, 3);
         stroke(Grid_StrokeColor);
         strokeWeight(Grid_StrokeWeight);
     }
