@@ -29,5 +29,17 @@ class TopMenu {
         }
     }
 
-    public static temp() {console.log('temp called!')};
+    public static zoom(plus: boolean) {
+        plus ? Grid_Scale += 10 : Grid_Scale -= 10;
+    }
+
+    public static moveX(positiv: boolean) {
+        positiv ? Grid_Xdif -= 1 : Grid_Xdif += 1;
+    }
+
+    public static moveY(positiv: boolean) {
+        positiv ? Grid_Ydif -= 1 : Grid_Ydif += 1;
+    }
+
+    public static temp() {console.log('temp called!')}
 }

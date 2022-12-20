@@ -8,8 +8,8 @@ function windowResized() {
 
 function draw() {
     background(0);
-    TopMenu.drawTopMenu();
     Grid.drawGrid(40, 40);
+    TopMenu.drawTopMenu();
 }
 
 function mouseClicked() {
