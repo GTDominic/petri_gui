@@ -1,5 +1,6 @@
 class Grid {
     public static drawGrid(sizeX: number, sizeY: number): void {
+        push();
         this.prepareGrid();
         for(let i = 0; i < sizeX; ++i) {
             line(i, 0, i, sizeY);
@@ -7,11 +8,12 @@ class Grid {
         for(let i = 0; i < sizeY; ++i) {
             line(0, i, sizeX, i);
         }
+        pop();
     }
     private static prepareGrid(): void {
-        scale(50);
+        scale(Grid_Scale);
         translate(1, 1);
-        stroke('#ffffff');
-        strokeWeight(0.1);
+        stroke(Grid_StrokeColor);
+        strokeWeight(Grid_StrokeWeight);
     }
 }
