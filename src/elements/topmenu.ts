@@ -10,51 +10,56 @@ class TopMenu {
     }
 
     private static drawMenuButton(i: number): void {
+        topMenuButtons[i].x = i * 120 + 70;
         fill('#ff0000');
         noStroke();
-        rect(i * 120 + 70, 10, 100, 40);
+        rect(topMenuButtons[i].x, 10, 100, 40);
         textAlign(CENTER);
         textSize(20);
         fill('#00ff00');
         text(topMenuButtons[i].name, i * 120 + 120, 37.5);
     }
 
-    public static temp() {};
+    public static mouseEvent(): void {
+        if(mouseY < 10 || mouseY > 50) return;
+        for(let button of topMenuButtons) {
+            if(mouseX < button.x || mouseX > button.x + 100) continue;
+            button.func();
+            break;
+        }
+    }
+
+    public static temp() {console.log('temp called!')};
 }
 
-let topMenuButtons: Array<{
+interface TopMenuButton {
     name: string,
     x: number,
-    y: number,
     func: () => void,
-}> = [{
+}
+
+let topMenuButtons: Array<TopMenuButton> = [{
     name: 'Zoom +',
     x: null,
-    y: null,
     func: () => TopMenu.temp()
 }, {
     name: 'Zoom -',
     x: null,
-    y: null,
     func: () => TopMenu.temp()
 }, {
     name: 'X +',
     x: null,
-    y: null,
     func: () => TopMenu.temp()
 }, {
     name: 'X -',
     x: null,
-    y: null,
     func: () => TopMenu.temp()
 }, {
     name: 'Y +',
     x: null,
-    y: null,
     func: () => TopMenu.temp()
 }, {
     name: 'Y -',
     x: null,
-    y: null,
     func: () => TopMenu.temp()
 }];

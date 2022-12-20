@@ -11,3 +11,7 @@ function draw() {
     TopMenu.drawTopMenu();
     Grid.drawGrid(40, 40);
 }
+
+function mouseClicked() {
+    MouseHelper.handleClick();
+}
