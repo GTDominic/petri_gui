@@ -13,6 +13,10 @@ class TopMenu {
         fill('#ff0000');
         noStroke();
         rect(i * 120 + 70, 10, 100, 40);
+        textAlign(CENTER);
+        textSize(20);
+        fill('#00ff00');
+        text(topMenuButtons[i].name, i * 120 + 120, 37.5);
     }
 
     public static temp() {};
