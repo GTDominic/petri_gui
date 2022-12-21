@@ -3,3 +3,8 @@ interface TopMenu_Button {
     x: number,
     func: () => void,
 }
+
+interface Menu_Element {
+    element: Place | Transition,
+    func: () => void,
+}

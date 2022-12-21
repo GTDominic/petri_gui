@@ -24,6 +24,14 @@ let TopMenu_Buttons: Array<TopMenu_Button> = [{
     func: () => TopMenu.moveY(false)
 }];
 
+let Menu_Elements: Array<Menu_Element> = [{
+    element: new Place(80, 160, 150),
+    func: () => Menu.temp(),
+}, {
+    element: new Transition(80, 310, 150),
+    func: () => Menu.temp(),
+}]
+
 let Grid_Scale = 150;
 let Grid_Xdif = 0;
 let Grid_Ydif = 0;

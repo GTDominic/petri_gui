@@ -1,11 +1,13 @@
 abstract class PetriElement {
     protected x: number;
     protected y: number;
+    protected scale: number;
     protected marked: boolean;
 
-    constructor(x: number, y: number) {
+    constructor(x: number, y: number, scale: number) {
         this.x = x;
         this.y = y;
+        this.scale = scale;
         this.marked = false;
     }
 
@@ -17,7 +19,7 @@ abstract class PetriElement {
 
     public draw(): void {
         push();
-        strokeWeight(0.03);
+        strokeWeight(0.03 * this.scale);
         stroke('#ffffff');
         this.marked ? fill('#00aa00') : fill('#aaaaaa');
         this.drawElement();

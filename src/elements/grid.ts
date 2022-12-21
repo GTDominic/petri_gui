@@ -12,7 +12,7 @@ class Grid {
         pop();
     }
     private static prepareGrid(): void {
-        translate(250, 160);
+        translate(260, 160);
         scale(Grid_Scale);
         translate(Grid_Xdif, Grid_Ydif);
         stroke('#ffffff');
