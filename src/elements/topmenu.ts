@@ -1,7 +1,8 @@
 class TopMenu {
     public static drawTopMenu() {
         push();
-        fill('#aaaaaa');
+        noStroke();
+        fill('#1d39b8');
         rect(0, 0, width, 60);
         for(let i = 0; i < TopMenu_Buttons.length; i++) {
             this.drawMenuButton(i);
@@ -11,12 +12,12 @@ class TopMenu {
 
     private static drawMenuButton(i: number): void {
         TopMenu_Buttons[i].x = i * 120 + 70;
-        fill('#ff0000');
+        fill('#333333');
         noStroke();
         rect(TopMenu_Buttons[i].x, 10, 100, 40);
         textAlign(CENTER);
         textSize(20);
-        fill('#00ff00');
+        fill('#ffffff');
         text(TopMenu_Buttons[i].name, i * 120 + 120, 37.5);
     }
 
@@ -40,6 +41,4 @@ class TopMenu {
     public static moveY(positiv: boolean) {
         positiv ? Grid_Ydif -= 1 : Grid_Ydif += 1;
     }
-
-    public static temp() {console.log('temp called!')}
 }

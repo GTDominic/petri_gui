@@ -10,6 +10,7 @@ function draw() {
     background(0);
     Grid.drawGrid(40, 40);
     TopMenu.drawTopMenu();
+    Menu.drawMenu();
 }
 
 function mouseClicked() {

@@ -11,7 +11,7 @@ class Grid {
         pop();
     }
     private static prepareGrid(): void {
-        translate(50, 110);
+        translate(200, 110);
         scale(Grid_Scale);
         translate(Grid_Xdif, Grid_Ydif);
         stroke(Grid_StrokeColor);
