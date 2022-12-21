@@ -8,13 +8,14 @@ class Grid {
         for(let i = 0; i < sizeY; ++i) {
             line(0, i, sizeX, i);
         }
+        ElementHandler.drawElements();
         pop();
     }
     private static prepareGrid(): void {
-        translate(200, 110);
+        translate(250, 160);
         scale(Grid_Scale);
         translate(Grid_Xdif, Grid_Ydif);
-        stroke(Grid_StrokeColor);
-        strokeWeight(Grid_StrokeWeight);
+        stroke('#ffffff');
+        strokeWeight(0.03);
     }
 }
