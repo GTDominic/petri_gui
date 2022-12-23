@@ -35,10 +35,10 @@ class TopMenu {
     }
 
     public static moveX(positiv: boolean) {
-        positiv ? Grid_Xdif -= 1 : Grid_Xdif += 1;
+        positiv ? Grid_Xdif-- : Grid_Xdif++;
     }
 
     public static moveY(positiv: boolean) {
-        positiv ? Grid_Ydif -= 1 : Grid_Ydif += 1;
+        positiv ? Grid_Ydif-- : Grid_Ydif++;
     }
 }
