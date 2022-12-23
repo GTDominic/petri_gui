@@ -21,6 +21,11 @@ abstract class PetriElement {
         return {x: this.x, y: this.y};
     }
 
+    public setPosition(x: number, y: number): void {
+        this.x = x;
+        this.y = y;
+    }
+
     public draw(): void {
         push();
         strokeWeight(0.03 * this.scale);

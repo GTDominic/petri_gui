@@ -26,11 +26,13 @@ let TopMenu_Buttons: Array<TopMenu_Button> = [{
 
 let Menu_Elements: Array<Menu_Element> = [{
     element: new Place(80, 160, 150),
-    func: () => Menu.temp(),
+    func: () => MoveHelper.pickElement('Place'),
 }, {
     element: new Transition(80, 310, 150),
-    func: () => Menu.temp(),
-}]
+    func: () => MoveHelper.pickElement('Transition'),
+}];
+
+let Mouse_Element: PetriElement = null;
 
 let Grid_Scale = 150;
 let Grid_Xdif = 0;
